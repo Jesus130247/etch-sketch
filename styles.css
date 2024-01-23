@@ -1,0 +1,11 @@
+.firstBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 
+use flexbox to make the box apear as a grid, not as one on each line
+possible ideas:
+- flex-wrap to have them all fit
+- fix their size, so they cant be made smaller or larger
+ */
