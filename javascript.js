@@ -1,12 +1,14 @@
-function createGrid(width, height) {
+// function takes grid dimensions. It creates the number of columns you want,
+// ----- it then adds the number of boxs you want to each column.
+function createGrid(column_number, box_number) {
     const container = document.querySelector('.container')
     let divCOLUMN = undefined
     let boxN = undefined
 
-    for (let i = 0; i < width; i++) {
+    for (let i = 0; i < column_number; i++) {
         divCOLUMN = document.createElement('div')
         container.appendChild(divCOLUMN)
-        for (let j = 0; j < height; j++) {
+        for (let j = 0; j < box_number; j++) {
             boxN = document.createElement('div')
             divCOLUMN.appendChild(boxN)
         }
@@ -20,12 +22,6 @@ createGrid(16,16)
 // container 1 = ROW: is my row box
 // container 2 = COLUM: is my column box
 // so the issue is, even tho i can create infinte boxs to put into these containers, they only ever exist within 2 containers
-
-// POSSIBLE SOLUTIONS
-
-// ------- I can try and make each of those containers a fixed size, and make it flex wrap. but if thats the case, why don't i try just putting 256 boxs
-// into the original containers. Ill try that
-// THIS WORKS --- negative: HARD CODE, does not allow for any lee-way
 
 // ------- I can try adding aditional containers, and then to those adding 16 boxs. For example; I have CONTAINER, to CONTAINER i add COLUMN_1, 
 // to COLUMN_1 i add 16 boxs. then to CONTAINER i add COLUMN_2, and to COLUMN_2 i add 16 boxs.
