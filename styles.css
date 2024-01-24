@@ -1,9 +1,28 @@
-.firstBox {
+.container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.row div {
+    display: flex;
+    border-style: solid;
+    height: 30px;
+    width: 30px;
+}
+.column div {
+    display: flex;
+    border-style: dotted;
+    height: 30px;
+    width: 30px;
+}
+
+body {
+    display: flex;
+}
+div {
+    display: flex;
 }
 /* 
+first things first
+- make it such that a div has a box shape, and a border color, no padding/margin
 use flexbox to make the box apear as a grid, not as one on each line
 possible ideas:
 - flex-wrap to have them all fit
