@@ -22,7 +22,7 @@ function createGrid(column_number, box_number) {
         }
     }
 }
-createGrid(495,4)
+createGrid(16,16)
 function changeColour() {
     this.style.backgroundColor = 'red'
 }
