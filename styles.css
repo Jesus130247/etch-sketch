@@ -1,25 +1,24 @@
 .container {
     display: flex;
 }
-.row div {
+.container div {
+    display: flex;
+    width: 30px;
+    flex-direction: column;
+}
+.container div div {
     display: flex;
     border-style: solid;
-    height: 30px;
-    width: 30px;
-}
-.column div {
-    display: flex;
-    border-style: dotted;
-    height: 30px;
-    width: 30px;
+    border-width: 1px;
+    height: 29px;
+    width: 29px;
 }
 
 body {
     display: flex;
+    justify-content: center;
 }
-div {
-    display: flex;
-}
+
 /* 
 first things first
 - make it such that a div has a box shape, and a border color, no padding/margin
