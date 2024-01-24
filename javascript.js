@@ -4,7 +4,6 @@ function createGrid(column_number, box_number) {
     const container = document.querySelector('.container')
     let divCOLUMN = undefined
     let boxN = undefined
-
     for (let i = 0; i < column_number; i++) {
         divCOLUMN = document.createElement('div')
         container.appendChild(divCOLUMN)
@@ -14,16 +13,24 @@ function createGrid(column_number, box_number) {
         }
     }
 }
+createGrid(8,8)
 
-createGrid(16,16)
-
-// I have a big box called container
-// within container, i currently have 2 containers.
-// container 1 = ROW: is my row box
-// container 2 = COLUM: is my column box
-// so the issue is, even tho i can create infinte boxs to put into these containers, they only ever exist within 2 containers
-
-// ------- I can try adding aditional containers, and then to those adding 16 boxs. For example; I have CONTAINER, to CONTAINER i add COLUMN_1, 
-// to COLUMN_1 i add 16 boxs. then to CONTAINER i add COLUMN_2, and to COLUMN_2 i add 16 boxs.
-// benefits of this: it means i could add COLUMN_n to CONTAINER, and to each COLUMN i could add n boxs.
-// THIS WORKS!!! i now have a dynamic grid.
+function changeColour() {
+    const box = document.querySelector('.container div div')
+    box.style.backgroundColor = 'red'
+}
+function changeColourBack() {
+    const box = document.querySelector('.container div div')
+    box.style.backgroundColor = 'white'
+}
+ // I now need to create a function that lights up the boxs when i hover over them
+ const hover = document.querySelector('.container div div')
+ hover.addEventListener('mouseover',  () => {
+    console.log('moused in')
+    changeColour()
+ })
+ hover.addEventListener('mouseout', () => {
+    console.log('moused out')
+    changeColourBack()
+ })
+//  even tho each box is '.container div div' it only ever registers in the first box

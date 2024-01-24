@@ -1,9 +1,15 @@
 .container {
     display: flex;
 }
+.container {
+    display: flex;
+    height: 496px;
+    width: 496px;
+    justify-content: center;
+    align-items: center;
+}
 .container div {
     display: flex;
-    width: 30px;
     flex-direction: column;
 }
 .container div div {
@@ -19,11 +25,5 @@ body {
     justify-content: center;
 }
 
-/* 
-first things first
-- make it such that a div has a box shape, and a border color, no padding/margin
-use flexbox to make the box apear as a grid, not as one on each line
-possible ideas:
-- flex-wrap to have them all fit
-- fix their size, so they cant be made smaller or larger
- */
+/* make each box the same size */
+/* make them fill upo space to the best of their ability */
