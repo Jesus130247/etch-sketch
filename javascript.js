@@ -10,27 +10,12 @@ function createGrid(column_number, box_number) {
         for (let j = 0; j < box_number; j++) {
             boxN = document.createElement('div')
             divCOLUMN.appendChild(boxN)
+            boxN.addEventListener('mouseover', changeColour)
         }
     }
 }
-createGrid(8,8)
+createGrid(16,16)
 
 function changeColour() {
-    const box = document.querySelector('.container div div')
-    box.style.backgroundColor = 'red'
+    this.style.backgroundColor = 'red'
 }
-function changeColourBack() {
-    const box = document.querySelector('.container div div')
-    box.style.backgroundColor = 'white'
-}
- // I now need to create a function that lights up the boxs when i hover over them
- const hover = document.querySelector('.container div div')
- hover.addEventListener('mouseover',  () => {
-    console.log('moused in')
-    changeColour()
- })
- hover.addEventListener('mouseout', () => {
-    console.log('moused out')
-    changeColourBack()
- })
-//  even tho each box is '.container div div' it only ever registers in the first box
