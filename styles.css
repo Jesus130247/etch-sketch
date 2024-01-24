@@ -4,18 +4,15 @@
     height: 496px;
     width: 496px;
     justify-content: center;
-    align-items: center;
+    border-style: solid;
 }
 .container div {
     display: flex;
     flex-direction: column;
-}
+    }
 .container div div {
     display: flex;
-    border-style: solid;
     border-width: 1px;
-    height: 29px;
-    width: 29px;
 }
 
 body {
